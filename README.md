@@ -28,3 +28,13 @@ Extends `default` with Terraform-specific rules (disables automerge for Terrafor
   "extends": ["github>h13/renovate-config:terraform"]
 }
 ```
+
+## Ecosystem
+
+See [h13/.github](https://github.com/h13/.github#ecosystem) for the full infrastructure diagram.
+
+| リポ | 役割 |
+|---|---|
+| [h13/dotfiles](https://github.com/h13/dotfiles) | 開発環境 + `repo-init.sh` |
+| [h13/renovate-config](https://github.com/h13/renovate-config) | Renovate 共有プリセット ★ this repo |
+| [h13/.github](https://github.com/h13/.github) | CI テンプレート + SECURITY.md |
