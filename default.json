@@ -1,12 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", "helpers:pinGithubActionDigests"],
+  "description": ["Base Renovate config for h13 repositories"],
+  "extends": ["config:best-practices"],
   "minimumReleaseAge": "7 days",
-  "rangeStrategy": "pin",
+  "schedule": ["after 9pm on sunday"],
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 4,
+  "labels": ["dependencies"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "labels": ["dependencies", "breaking"]
     }
   ]
 }
