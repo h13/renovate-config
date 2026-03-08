@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Renovate config for Node.js/TypeScript projects"],
+  "extends": ["github>h13/renovate-config"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
+      "groupName": "dev dependencies"
+    },
+    {
+      "matchPackagePatterns": ["^eslint", "^@eslint/", "^typescript-eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "matchPackagePatterns": ["^@types/"],
+      "groupName": "type definitions",
+      "automerge": true
+    }
+  ]
+}
