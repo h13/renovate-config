@@ -13,12 +13,6 @@
       "matchDepTypes": ["module"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDepTypes": ["module"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
     }
   ]
 }
