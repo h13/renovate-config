@@ -18,6 +18,13 @@
     {
       "matchUpdateTypes": ["major"],
       "addLabels": ["breaking"]
+    },
+    {
+      "matchCategories": ["*"],
+      "isVulnerabilityAlert": true,
+      "minimumReleaseAge": "0 days",
+      "automerge": true,
+      "groupName": "security updates"
     }
   ]
 }
