@@ -6,6 +6,22 @@
     {
       "matchManagers": ["composer"],
       "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchPackageNames": ["/^phpstan\\//", "phpstan", "larastan"],
+      "groupName": "phpstan"
+    },
+    {
+      "matchPackageNames": ["/^phpunit\\//", "phpunit"],
+      "groupName": "phpunit"
+    },
+    {
+      "matchPackageNames": [
+        "friendsofphp/php-cs-fixer",
+        "/^simplify\\//",
+        "/^php-cs-fixer/"
+      ],
+      "groupName": "code style"
     }
   ]
 }

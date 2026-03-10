@@ -24,7 +24,13 @@
         "/^jest/",
         "/^@jest\\//",
         "/^vitest/",
-        "/^@testing-library\\//"
+        "/^@vitest\\//",
+        "/^@testing-library\\//",
+        "/^mocha/",
+        "/^chai/",
+        "/^sinon/",
+        "c8",
+        "nyc"
       ],
       "groupName": "testing"
     },
