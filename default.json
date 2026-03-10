@@ -21,9 +21,16 @@
     },
     {
       "isVulnerabilityAlert": true,
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "minimumReleaseAge": "0 days",
       "schedule": ["at any time"],
       "automerge": true
+    },
+    {
+      "isVulnerabilityAlert": true,
+      "matchUpdateTypes": ["major"],
+      "minimumReleaseAge": "0 days",
+      "schedule": ["at any time"]
     }
   ]
 }

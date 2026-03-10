@@ -16,11 +16,11 @@ jobs:
         with:
           node-version: 22
 
-      - run: npx --yes --package renovate -- renovate-config-validator *.json
+      - run: npx --yes --package renovate@43 -- renovate-config-validator *.json
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - run: npx --yes markdownlint-cli2 "**/*.md"
+      - run: npx --yes markdownlint-cli2@0 "**/*.md"

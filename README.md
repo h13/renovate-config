@@ -46,7 +46,7 @@ Base configuration for all repositories.
 - `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
 - Automerge: minor and patch updates
 - Major updates: labeled `breaking`, no automerge
-- Security alerts: bypass schedule and waiting period, automerge as individual PRs
+- Security alerts: bypass schedule and waiting period, automerge minor/patch (major requires review)
 - PR limits: 10 concurrent, 4/hour
 
 ### `node`
