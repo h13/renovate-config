@@ -8,6 +8,7 @@
   "schedule": ["after 9pm on sunday"],
   "prConcurrentLimit": 10,
   "prHourlyLimit": 4,
+  "configMigration": true,
   "labels": ["dependencies"],
   "packageRules": [
     {
