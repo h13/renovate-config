@@ -43,7 +43,7 @@ Base configuration for all repositories.
   (Docker pinning, lockfile maintenance, abandoned package alerts)
 - `minimumReleaseAge`: 7 days
 - `rangeStrategy`: pin (inherited from `config:best-practices`)
-- `schedule`: Sunday 21:00-06:00 JST (reduce PR noise)
+- `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
 - Automerge: minor and patch updates
 - Major updates: labeled `breaking`, no automerge
 - Security alerts: bypass waiting period and automerge immediately
@@ -78,7 +78,8 @@ Extends `default` with PHP rules:
 
 Extends `default` with GitHub Actions rules:
 
-- All action updates: grouped into single PR
+- Minor/patch updates: grouped into single PR
+- Major updates: individual PR, no automerge
 
 ### `terraform`
 
