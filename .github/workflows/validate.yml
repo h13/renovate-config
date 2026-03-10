@@ -17,3 +17,10 @@ jobs:
           node-version: 22
 
       - run: npx --yes --package renovate -- renovate-config-validator
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: npx --yes markdownlint-cli2 "**/*.md"
