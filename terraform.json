@@ -5,6 +5,19 @@
   "packageRules": [
     {
       "matchManagers": ["terraform"],
+      "matchDepTypes": ["provider"],
+      "automerge": false
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["module"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["module"],
+      "matchUpdateTypes": ["major"],
       "automerge": false
     }
   ]
