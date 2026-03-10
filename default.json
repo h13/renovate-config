@@ -22,8 +22,8 @@
     {
       "isVulnerabilityAlert": true,
       "minimumReleaseAge": "0 days",
-      "automerge": true,
-      "groupName": "security updates"
+      "schedule": ["at any time"],
+      "automerge": true
     }
   ]
 }
