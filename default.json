@@ -5,7 +5,7 @@
   "dependencyDashboardApproval": false,
   "minimumReleaseAge": "7 days",
   "timezone": "Asia/Tokyo",
-  "schedule": ["after 9pm on sunday"],
+  "schedule": ["after 9pm and before 6am on sunday"],
   "prConcurrentLimit": 10,
   "prHourlyLimit": 4,
   "configMigration": true,
