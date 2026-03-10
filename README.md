@@ -46,7 +46,7 @@ Base configuration for all repositories.
 - `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
 - Automerge: minor and patch updates
 - Major updates: labeled `breaking`, no automerge
-- Security alerts: bypass waiting period and automerge immediately
+- Security alerts: bypass schedule and waiting period, automerge as individual PRs
 - PR limits: 10 concurrent, 4/hour
 
 ### `node`
@@ -79,7 +79,7 @@ Extends `default` with PHP rules:
 Extends `default` with GitHub Actions rules:
 
 - Minor/patch updates: grouped into single PR
-- Major updates: individual PR, no automerge
+- Major updates: individual PRs (not automerged)
 
 ### `terraform`
 
