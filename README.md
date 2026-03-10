@@ -28,7 +28,8 @@ Or use a stack-specific preset:
 
 Base configuration for all repositories.
 
-- Extends `config:best-practices` (Docker pinning, lockfile maintenance, abandoned package alerts)
+- Extends `config:best-practices`
+  (Docker pinning, lockfile maintenance, abandoned package alerts)
 - `minimumReleaseAge`: 7 days
 - `rangeStrategy`: pin
 - `schedule`: Sunday night (reduce PR noise)
@@ -40,9 +41,10 @@ Base configuration for all repositories.
 
 Extends `default` with Node.js rules:
 
-- Dev dependencies: grouped + automerge
+- Dev dependencies: grouped into single PR
 - ESLint ecosystem: grouped into single PR
-- `@types/*`: grouped + automerge
+- Prettier/Biome: grouped into single PR
+- `@types/*`: grouped into single PR
 
 ### `go`
 
@@ -56,6 +58,12 @@ Extends `default` with PHP rules:
 
 - `rangeStrategy`: update-lockfile (respect composer.json ranges)
 
+### `github-actions`
+
+Extends `default` with GitHub Actions rules:
+
+- All action updates: grouped into single PR
+
 ### `terraform`
 
 Extends `default` with Terraform rules:
@@ -64,8 +72,8 @@ Extends `default` with Terraform rules:
 
 ## Ecosystem
 
-| Repo | Role |
-|---|---|
-| [h13/dotfiles](https://github.com/h13/dotfiles) | Dev environment + `repo-init` (generates renovate.json) |
-| [h13/.github](https://github.com/h13/.github) | Reusable CI workflows |
-| [h13/renovate-config](https://github.com/h13/renovate-config) | Shared Renovate presets (this repo) |
+| Repo                                                          | Role                                                    |
+| ------------------------------------------------------------- | ------------------------------------------------------- |
+| [h13/dotfiles](https://github.com/h13/dotfiles)               | Dev environment + `repo-init` (generates renovate.json) |
+| [h13/.github](https://github.com/h13/.github)                 | Reusable CI workflows                                   |
+| [h13/renovate-config](https://github.com/h13/renovate-config) | Shared Renovate presets (this repo)                     |
