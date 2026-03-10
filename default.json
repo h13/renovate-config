@@ -15,7 +15,6 @@
     },
     {
       "matchUpdateTypes": ["major"],
-      "automerge": false,
       "labels": ["dependencies", "breaking"]
     }
   ]

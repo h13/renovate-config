@@ -5,17 +5,19 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "automerge": true,
       "groupName": "dev dependencies"
     },
     {
-      "matchPackagePatterns": ["^eslint", "^@eslint/", "^typescript-eslint"],
+      "matchPackageNames": [
+        "/^eslint/",
+        "/^@eslint\\//",
+        "/^typescript-eslint/"
+      ],
       "groupName": "eslint"
     },
     {
-      "matchPackagePatterns": ["^@types/"],
-      "groupName": "type definitions",
-      "automerge": true
+      "matchPackageNames": ["/^@types\\//"],
+      "groupName": "type definitions"
     }
   ]
 }

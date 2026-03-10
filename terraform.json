@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Renovate config for Terraform projects"],
   "extends": ["github>h13/renovate-config"],
   "packageRules": [
     {
