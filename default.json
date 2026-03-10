@@ -4,6 +4,7 @@
   "extends": ["config:best-practices"],
   "dependencyDashboardApproval": false,
   "minimumReleaseAge": "7 days",
+  "timezone": "Asia/Tokyo",
   "schedule": ["after 9pm on sunday"],
   "prConcurrentLimit": 10,
   "prHourlyLimit": 4,
