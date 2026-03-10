@@ -42,8 +42,8 @@ Base configuration for all repositories.
 - Extends `config:best-practices`
   (Docker pinning, lockfile maintenance, abandoned package alerts)
 - `minimumReleaseAge`: 7 days
-- `rangeStrategy`: pin
-- `schedule`: Sunday night (reduce PR noise)
+- `rangeStrategy`: pin (inherited from `config:best-practices`)
+- `schedule`: Sunday 21:00-06:00 JST (reduce PR noise)
 - Automerge: minor and patch updates
 - Major updates: labeled `breaking`, no automerge
 - Security alerts: bypass waiting period and automerge immediately
@@ -84,7 +84,8 @@ Extends `default` with GitHub Actions rules:
 
 Extends `default` with Terraform rules:
 
-- Automerge disabled (infrastructure changes require review)
+- Providers: automerge disabled (infrastructure changes require review)
+- Modules: automerge minor/patch, require review for major
 
 ## Ecosystem
 
