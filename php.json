@@ -18,7 +18,7 @@
     {
       "matchPackageNames": [
         "friendsofphp/php-cs-fixer",
-        "/^simplify\\//",
+        "/^symplify\\//",
         "/^php-cs-fixer/"
       ],
       "groupName": "code style"
