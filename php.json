@@ -8,11 +8,15 @@
       "rangeStrategy": "update-lockfile"
     },
     {
-      "matchPackageNames": ["/^phpstan\\//", "phpstan", "larastan"],
+      "matchPackageNames": [
+        "/^phpstan\\//",
+        "phpstan/phpstan",
+        "nunomaduro/larastan"
+      ],
       "groupName": "phpstan"
     },
     {
-      "matchPackageNames": ["/^phpunit\\//", "phpunit"],
+      "matchPackageNames": ["/^phpunit\\//", "phpunit/phpunit"],
       "groupName": "phpunit"
     },
     {
