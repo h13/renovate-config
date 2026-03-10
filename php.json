@@ -22,6 +22,14 @@
         "/^php-cs-fixer/"
       ],
       "groupName": "code style"
+    },
+    {
+      "matchPackageNames": ["vimeo/psalm", "/^psalm\\//"],
+      "groupName": "psalm"
+    },
+    {
+      "matchPackageNames": ["rector/rector", "/^rector\\//"],
+      "groupName": "rector"
     }
   ]
 }

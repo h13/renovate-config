@@ -14,7 +14,7 @@ Add to your `renovate.json`:
 }
 ```
 
-Or use a stack-specific preset:
+Or use a stack-specific preset (each preset automatically extends `default`):
 
 ```json
 {
@@ -22,7 +22,10 @@ Or use a stack-specific preset:
 }
 ```
 
-Combine multiple presets for projects with mixed stacks:
+Combine multiple presets for projects with mixed stacks.
+When combining presets, `packageRules` are merged in order — later presets'
+rules are appended after earlier ones, and Renovate applies them sequentially
+(last match wins for each setting):
 
 ```json
 {
@@ -44,7 +47,7 @@ Base configuration for all repositories.
 - `minimumReleaseAge`: 7 days
 - `rangeStrategy`: pin (inherited from `config:best-practices`)
 - `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
-- Automerge: minor and patch updates
+- Automerge: minor, patch, pin, and digest updates
 - Major updates: labeled `breaking`, no automerge
 - Security alerts: bypass schedule and waiting period, automerge minor/patch (major requires review)
 - PR limits: 10 concurrent, 4/hour
@@ -64,6 +67,7 @@ Extends `default` with Node.js rules:
 Extends `default` with Go rules:
 
 - `go mod tidy` after dependency updates
+- Automatic import path updates for major version bumps (v2+)
 
 ### `php`
 
@@ -73,6 +77,8 @@ Extends `default` with PHP rules:
 - PHPStan: grouped into single PR
 - PHPUnit: grouped into single PR
 - Code style tools (php-cs-fixer, etc.): grouped into single PR
+- Psalm: grouped into single PR
+- Rector: grouped into single PR
 
 ### `github-actions`
 

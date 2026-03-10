@@ -5,14 +5,17 @@
   "dependencyDashboardApproval": false,
   "minimumReleaseAge": "7 days",
   "timezone": "Asia/Tokyo",
-  "schedule": ["after 9pm on sunday", "before 6am on monday"],
+  "schedule": [
+    "after 9pm and before 11:59pm on sunday",
+    "before 6am on monday"
+  ],
   "prConcurrentLimit": 10,
   "prHourlyLimit": 4,
   "configMigration": true,
   "labels": ["dependencies"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     },
     {

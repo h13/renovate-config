@@ -3,8 +3,16 @@ name: Validate
 on:
   push:
     branches: [main]
+    paths:
+      - "*.json"
+      - "*.md"
+      - ".github/workflows/**"
   pull_request:
     branches: [main]
+    paths:
+      - "*.json"
+      - "*.md"
+      - ".github/workflows/**"
 
 jobs:
   validate:
@@ -22,5 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - run: npx --yes markdownlint-cli2@0 "**/*.md"
