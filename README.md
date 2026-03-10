@@ -22,6 +22,17 @@ Or use a stack-specific preset:
 }
 ```
 
+Combine multiple presets for projects with mixed stacks:
+
+```json
+{
+  "extends": [
+    "github>h13/renovate-config:node",
+    "github>h13/renovate-config:github-actions"
+  ]
+}
+```
+
 ## Presets
 
 ### `default`
@@ -35,6 +46,7 @@ Base configuration for all repositories.
 - `schedule`: Sunday night (reduce PR noise)
 - Automerge: minor and patch updates
 - Major updates: labeled `breaking`, no automerge
+- Security alerts: bypass waiting period and automerge immediately
 - PR limits: 10 concurrent, 4/hour
 
 ### `node`
@@ -44,6 +56,7 @@ Extends `default` with Node.js rules:
 - Dev dependencies: grouped into single PR
 - ESLint ecosystem: grouped into single PR
 - Prettier/Biome: grouped into single PR
+- Testing (jest, vitest, mocha, chai, sinon, c8, nyc): grouped into single PR
 - `@types/*`: grouped into single PR
 
 ### `go`
@@ -57,6 +70,9 @@ Extends `default` with Go rules:
 Extends `default` with PHP rules:
 
 - `rangeStrategy`: update-lockfile (respect composer.json ranges)
+- PHPStan: grouped into single PR
+- PHPUnit: grouped into single PR
+- Code style tools (php-cs-fixer, etc.): grouped into single PR
 
 ### `github-actions`
 
