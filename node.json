@@ -5,6 +5,24 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
+      "excludePackageNames": [
+        "/^eslint/",
+        "/^@eslint\\//",
+        "/^typescript-eslint/",
+        "/^prettier/",
+        "/^@biomejs\\//",
+        "/^jest/",
+        "/^@jest\\//",
+        "/^vitest/",
+        "/^@vitest\\//",
+        "/^@testing-library\\//",
+        "/^mocha/",
+        "/^chai/",
+        "/^sinon/",
+        "c8",
+        "nyc",
+        "/^@types\\//"
+      ],
       "groupName": "dev dependencies"
     },
     {
