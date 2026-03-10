@@ -20,6 +20,15 @@
       "groupName": "formatter"
     },
     {
+      "matchPackageNames": [
+        "/^jest/",
+        "/^@jest\\//",
+        "/^vitest/",
+        "/^@testing-library\\//"
+      ],
+      "groupName": "testing"
+    },
+    {
       "matchPackageNames": ["/^@types\\//"],
       "groupName": "type definitions"
     }
