@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 22
 
-      - run: npx --yes --package renovate -- renovate-config-validator
+      - run: npx --yes --package renovate -- renovate-config-validator default.json node.json go.json php.json terraform.json github-actions.json
 
   lint:
     runs-on: ubuntu-latest
