@@ -16,6 +16,10 @@
       "groupName": "eslint"
     },
     {
+      "matchPackageNames": ["/^prettier/", "/^@biomejs\\//"],
+      "groupName": "formatter"
+    },
+    {
       "matchPackageNames": ["/^@types\\//"],
       "groupName": "type definitions"
     }
