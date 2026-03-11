@@ -26,28 +26,36 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Validate Renovate config
+        run: npx --yes --package renovate@43 -- renovate-config-validator *.json
 
-      - run: npx --yes --package renovate@43 -- renovate-config-validator *.json
-
-  lint:
+  prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Install prettier
+        run: npm install -g prettier
 
-      - run: npx --yes markdownlint-cli2@0 "**/*.md"
+      - name: Prettier check
+        run: prettier --check '*.json' '*.jsonc'
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Install markdownlint-cli2
+        run: npm install -g markdownlint-cli2
+
+      - name: Lint Markdown
+        run: markdownlint-cli2 '**/*.md'
 
   typos:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: crate-ci/typos@v1
+      - uses: crate-ci/typos@a8d8e187146634c459c27ade2d3e338569378720 # v1.44.0
