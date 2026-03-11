@@ -6,12 +6,16 @@ on:
     paths:
       - "*.json"
       - "*.md"
+      - "*.toml"
+      - "*.jsonc"
       - ".github/workflows/**"
   pull_request:
     branches: [main]
     paths:
       - "*.json"
       - "*.md"
+      - "*.toml"
+      - "*.jsonc"
       - ".github/workflows/**"
 
 jobs:
@@ -36,3 +40,10 @@ jobs:
           node-version: 22
 
       - run: npx --yes markdownlint-cli2@0 "**/*.md"
+
+  typos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: crate-ci/typos@v1

@@ -21,7 +21,17 @@
         "!/^sinon/",
         "!c8",
         "!nyc",
-        "!/^@types\\//"
+        "!/^@types\\//",
+        "!/^stylelint/",
+        "!/^postcss/",
+        "!/^webpack/",
+        "!/^vite/",
+        "!/^@vitejs\\//",
+        "!/^esbuild/",
+        "!/^rollup/",
+        "!/^@rollup\\//",
+        "!tsup",
+        "!turbopack"
       ],
       "groupName": "dev dependencies"
     },
@@ -36,6 +46,10 @@
     {
       "matchPackageNames": ["/^prettier/", "/^@biomejs\\//"],
       "groupName": "formatter"
+    },
+    {
+      "matchPackageNames": ["/^stylelint/", "/^postcss/"],
+      "groupName": "stylelint"
     },
     {
       "matchPackageNames": [
@@ -55,6 +69,19 @@
     {
       "matchPackageNames": ["/^@types\\//"],
       "groupName": "type definitions"
+    },
+    {
+      "matchPackageNames": [
+        "/^webpack/",
+        "/^vite/",
+        "/^@vitejs\\//",
+        "/^esbuild/",
+        "/^rollup/",
+        "/^@rollup\\//",
+        "tsup",
+        "turbopack"
+      ],
+      "groupName": "bundler"
     }
   ]
 }
