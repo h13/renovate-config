@@ -53,6 +53,13 @@ jobs:
       - name: Lint Markdown
         run: markdownlint-cli2 '**/*.md'
 
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - uses: reviewdog/action-actionlint@30f054494d5c1aa100ec4e57d1c7601100fc8f45 # v1.71.0
+
   typos:
     runs-on: ubuntu-latest
     steps:

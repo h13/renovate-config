@@ -1,5 +1,6 @@
 # renovate-config
 
+[![Validate](https://github.com/h13/renovate-config/actions/workflows/validate.yml/badge.svg)](https://github.com/h13/renovate-config/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Shared [Renovate](https://docs.renovatebot.com/) configuration presets for h13 repositories.
