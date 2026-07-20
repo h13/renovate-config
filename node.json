@@ -102,6 +102,16 @@
         "turbopack"
       ],
       "groupName": "bundler"
+    },
+    {
+      "matchDepNames": ["pnpm"],
+      "matchManagers": ["npm"],
+      "groupName": "pnpm"
+    },
+    {
+      "matchPackageNames": ["/^@swc\\//", "swc-loader"],
+      "groupName": "swc",
+      "automerge": true
     }
   ]
 }
