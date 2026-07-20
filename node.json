@@ -11,6 +11,11 @@
         "!/^typescript-eslint/",
         "!/^prettier/",
         "!/^@biomejs\\//",
+        "!/^oxlint/",
+        "!/^@oxlint\\//",
+        "!/^oxfmt/",
+        "!/^@oxfmt\\//",
+        "!/^oxlint-tsgolint/",
         "!/^jest/",
         "!/^@jest\\//",
         "!/^vitest/",
@@ -39,13 +44,28 @@
       "matchPackageNames": [
         "/^eslint/",
         "/^@eslint\\//",
-        "/^typescript-eslint/"
+        "/^typescript-eslint/",
+        "/^eslint-config-/",
+        "/^eslint-plugin-/"
       ],
-      "groupName": "eslint"
+      "groupName": "eslint",
+      "enabled": false
     },
     {
       "matchPackageNames": ["/^prettier/", "/^@biomejs\\//"],
-      "groupName": "formatter"
+      "groupName": "formatter",
+      "enabled": false
+    },
+    {
+      "matchPackageNames": [
+        "/^oxlint/",
+        "/^@oxlint\\//",
+        "/^oxfmt/",
+        "/^@oxfmt\\//",
+        "oxlint-tsgolint"
+      ],
+      "groupName": "oxc toolchain",
+      "automerge": true
     },
     {
       "matchPackageNames": ["/^stylelint/", "/^postcss/"],
