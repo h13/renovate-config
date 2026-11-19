@@ -30,10 +30,7 @@ rules are appended after earlier ones, and Renovate applies them sequentially
 
 ```json
 {
-  "extends": [
-    "github>h13/renovate-config:node",
-    "github>h13/renovate-config:github-actions"
-  ]
+  "extends": ["github>h13/renovate-config:node", "github>h13/renovate-config:github-actions"]
 }
 ```
 
