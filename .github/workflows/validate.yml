@@ -31,16 +31,16 @@ jobs:
       - name: Validate Renovate config
         run: npx --yes --package renovate@43 -- renovate-config-validator *.json
 
-  prettier:
+  oxfmt:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
-      - name: Install prettier
-        run: npm install -g prettier
+      - name: Install oxfmt
+        run: npm install -g oxfmt
 
-      - name: Prettier check
-        run: prettier --check '*.json' '*.jsonc'
+      - name: Format check
+        run: oxfmt --check .
 
   markdownlint:
     runs-on: ubuntu-latest
