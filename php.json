@@ -16,7 +16,11 @@
       "groupName": "phpunit"
     },
     {
-      "matchPackageNames": ["friendsofphp/php-cs-fixer", "/^symplify\\//", "/^php-cs-fixer/"],
+      "matchPackageNames": [
+        "friendsofphp/php-cs-fixer",
+        "/^symplify\\//",
+        "/^php-cs-fixer/"
+      ],
       "groupName": "code style"
     },
     {
