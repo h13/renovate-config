@@ -8,19 +8,19 @@ on:
   push:
     branches: [main]
     paths:
-      - '*.json'
-      - '*.md'
-      - '*.toml'
-      - '*.jsonc'
-      - '.github/workflows/**'
+      - "*.json"
+      - "*.md"
+      - "*.toml"
+      - "*.jsonc"
+      - ".github/workflows/**"
   pull_request:
     branches: [main]
     paths:
-      - '*.json'
-      - '*.md'
-      - '*.toml'
-      - '*.jsonc'
-      - '.github/workflows/**'
+      - "*.json"
+      - "*.md"
+      - "*.toml"
+      - "*.jsonc"
+      - ".github/workflows/**"
 
 jobs:
   validate:
