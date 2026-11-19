@@ -13,6 +13,18 @@
   "prHourlyLimit": 4,
   "configMigration": true,
   "labels": ["dependencies"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": [
+        "Update values annotated with `# renovate: datasource=... depName=...` in workflow files (e.g. reusable workflow input defaults)"
+      ],
+      "managerFilePatterns": ["/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z0-9-.]+?) depName=(?<depName>[^\\s]+?)(?: versioning=(?<versioning>[^\\s]+?))?\\n\\s*[A-Za-z0-9_-]+: \"?(?<currentValue>[^\"\\s]+?)\"?\\n"
+      ]
+    }
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
