@@ -42,15 +42,16 @@ CI additionally runs actionlint and typos on the workflow files.
   versions >= 1.0.0 (a 0.x minor can be breaking per semver). Majors get the
   `breaking` label and are never automerged.
 - Stack presets (`node.json`, `go.json`, `php.json`, `github-actions.json`,
-  `terraform.json`, `opentofu.json`) each extend
+  `opentofu.json`) each extend
   `"github>h13/renovate-config"` — the **remote** default preset, not the local
   file.
 - `renovate.json` — this repo's own Renovate config (dogfoods the default
   preset).
-- `opentofu.json` just extends the terraform preset: OpenTofu files are
-  handled by Renovate's `terraform` manager. Note the terraform provider rules
-  must match depTypes `provider` AND `required_provider` — the latter is what
-  a `required_providers` block (the standard modern declaration) produces.
+- `opentofu.json` is the IaC preset (there is no terraform preset; all h13
+  IaC is OpenTofu, whose files Renovate's `terraform` manager handles, so
+  `matchManagers: ["terraform"]` stays). Its provider rules must match
+  depTypes `provider` AND `required_provider` — the latter is what a
+  `required_providers` block (the standard modern declaration) produces.
 
 ### Rule-ordering semantics (the main thing to get right)
 
