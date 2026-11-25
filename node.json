@@ -4,36 +4,10 @@
   "extends": ["github>h13/renovate-config"],
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
-      "matchPackageNames": [
-        "!/^oxlint/",
-        "!/^@oxlint\\//",
-        "!/^oxfmt/",
-        "!/^@oxfmt\\//",
-        "!/^oxlint-tsgolint/",
-        "!/^jest/",
-        "!/^@jest\\//",
-        "!/^vitest/",
-        "!/^@vitest\\//",
-        "!/^@testing-library\\//",
-        "!/^mocha/",
-        "!/^chai/",
-        "!/^sinon/",
-        "!c8",
-        "!nyc",
-        "!/^@types\\//",
-        "!/^stylelint/",
-        "!/^postcss/",
-        "!/^webpack/",
-        "!vite",
-        "!/^vite-/",
-        "!/^@vitejs\\//",
-        "!/^esbuild/",
-        "!/^rollup/",
-        "!/^@rollup\\//",
-        "!tsup",
-        "!turbopack"
+      "description": [
+        "Catch-all for devDependencies; must stay first so the specific groups below override it (packageRules apply last-match-wins)"
       ],
+      "matchDepTypes": ["devDependencies"],
       "groupName": "dev dependencies"
     },
     {
