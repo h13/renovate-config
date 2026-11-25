@@ -27,7 +27,15 @@
     },
     {
       "matchUpdateTypes": ["minor"],
-      "matchCurrentVersion": "!/^0/",
+      "matchCurrentVersion": "!/^v?0\\./",
+      "automerge": true
+    },
+    {
+      "description": [
+        "0.x minors can be breaking per semver; automerge them only for dev-scoped deps, where a broken update fails CI instead of production"
+      ],
+      "matchUpdateTypes": ["minor"],
+      "matchDepTypes": ["devDependencies", "require-dev"],
       "automerge": true
     },
     {

@@ -43,10 +43,13 @@ Base configuration for all repositories.
 - Extends [`config:best-practices`](https://docs.renovatebot.com/presets-config/#configbest-practices)
 - `minimumReleaseAge`: 7 days
 - `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
-- Automerge: minor, patch, pin, and digest updates
-  (minor only from version 1.0.0 — a 0.x minor can be breaking per semver)
+- Automerge: minor, patch, pin, and digest updates.
+  0.x minors (breaking per semver) are automerged only for dev-scoped
+  dependencies (`devDependencies` / `require-dev`), where a broken update
+  fails CI instead of production
 - Major updates: labeled `breaking`, no automerge
-- Security alerts: bypass schedule and waiting period, automerge minor/patch (major requires review)
+- Security alerts: bypass schedule and waiting period; automerge follows the
+  same rules (major and production 0.x minor require review)
 - PR limits: 10 concurrent, 4/hour
 
 ### `node`
