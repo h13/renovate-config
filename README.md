@@ -57,12 +57,12 @@ Base configuration for all repositories.
 Extends `default` with Node.js rules:
 
 - Dev dependencies: grouped into single PR
-- oxc toolchain (oxlint, oxfmt): grouped into single PR, automerged
+- oxc toolchain (oxlint, oxfmt): grouped into single PR
 - Stylelint/PostCSS: grouped into single PR
 - Testing (jest, vitest, mocha, chai, sinon, c8, nyc): grouped into single PR
 - `@types/*`: grouped into single PR
 - Bundler (webpack, vite, esbuild, rollup, tsup, turbopack): grouped into single PR
-- swc: grouped into single PR, automerged
+- swc: grouped into single PR
 - pnpm: own group
 
 ### `go`
@@ -97,7 +97,6 @@ Extends `default` with OpenTofu rules
 (OpenTofu files are handled by Renovate's `terraform` manager):
 
 - Providers: automerge disabled (infrastructure changes require review)
-- Modules: automerge minor/patch, require review for major
 
 ## Ecosystem
 
