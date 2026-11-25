@@ -1,5 +1,16 @@
 name: Validate
 
+permissions:
+  contents: read
+
+env:
+  # renovate: datasource=npm depName=renovate
+  RENOVATE_VERSION: "43.288.0"
+  # renovate: datasource=npm depName=oxfmt
+  OXFMT_VERSION: "0.80.0"
+  # renovate: datasource=npm depName=markdownlint-cli2
+  MARKDOWNLINT_CLI2_VERSION: "0.24.2"
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -29,7 +40,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Validate Renovate config
-        run: npx --yes --package renovate@43 -- renovate-config-validator *.json
+        run: npx --yes --package "renovate@${RENOVATE_VERSION}" -- renovate-config-validator *.json
 
   oxfmt:
     runs-on: ubuntu-latest
@@ -37,7 +48,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Install oxfmt
-        run: npm install -g oxfmt
+        run: npm install -g "oxfmt@${OXFMT_VERSION}"
 
       - name: Format check
         run: oxfmt --check .
@@ -48,7 +59,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Install markdownlint-cli2
-        run: npm install -g markdownlint-cli2
+        run: npm install -g "markdownlint-cli2@${MARKDOWNLINT_CLI2_VERSION}"
 
       - name: Lint Markdown
         run: markdownlint-cli2 '**/*.md'
