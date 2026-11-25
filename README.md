@@ -46,6 +46,7 @@ Base configuration for all repositories.
 - `rangeStrategy`: pin (inherited from `config:best-practices`)
 - `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
 - Automerge: minor, patch, pin, and digest updates
+  (minor only from version 1.0.0 — a 0.x minor can be breaking per semver)
 - Major updates: labeled `breaking`, no automerge
 - Security alerts: bypass schedule and waiting period, automerge minor/patch (major requires review)
 - PR limits: 10 concurrent, 4/hour
