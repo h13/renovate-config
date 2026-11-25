@@ -25,7 +25,8 @@
         "!/^stylelint/",
         "!/^postcss/",
         "!/^webpack/",
-        "!/^vite/",
+        "!vite",
+        "!/^vite-/",
         "!/^@vitejs\\//",
         "!/^esbuild/",
         "!/^rollup/",
@@ -72,7 +73,8 @@
     {
       "matchPackageNames": [
         "/^webpack/",
-        "/^vite/",
+        "vite",
+        "/^vite-/",
         "/^@vitejs\\//",
         "/^esbuild/",
         "/^rollup/",
