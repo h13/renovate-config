@@ -15,6 +15,7 @@
         "Update values annotated with `# renovate: datasource=... depName=...` in workflow files (e.g. reusable workflow input defaults)"
       ],
       "managerFilePatterns": ["/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"],
+      "depTypeTemplate": "devDependencies",
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z0-9-.]+?) depName=(?<depName>[^\\s]+?)(?: versioning=(?<versioning>[^\\s]+?))?\\n\\s*[A-Za-z0-9_-]+: \"?(?<currentValue>[^\"\\s]+?)\"?\\n"
       ]
