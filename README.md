@@ -55,8 +55,7 @@ Base configuration for all repositories.
 Extends `default` with Node.js rules:
 
 - Dev dependencies: grouped into single PR
-- ESLint ecosystem: grouped into single PR
-- Prettier/Biome: grouped into single PR
+- oxc toolchain (oxlint, oxfmt): grouped into single PR, automerged
 - Stylelint/PostCSS: grouped into single PR
 - Testing (jest, vitest, mocha, chai, sinon, c8, nyc): grouped into single PR
 - `@types/*`: grouped into single PR

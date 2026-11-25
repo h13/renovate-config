@@ -6,11 +6,6 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchPackageNames": [
-        "!/^eslint/",
-        "!/^@eslint\\//",
-        "!/^typescript-eslint/",
-        "!/^prettier/",
-        "!/^@biomejs\\//",
         "!/^oxlint/",
         "!/^@oxlint\\//",
         "!/^oxfmt/",
@@ -39,22 +34,6 @@
         "!turbopack"
       ],
       "groupName": "dev dependencies"
-    },
-    {
-      "matchPackageNames": [
-        "/^eslint/",
-        "/^@eslint\\//",
-        "/^typescript-eslint/",
-        "/^eslint-config-/",
-        "/^eslint-plugin-/"
-      ],
-      "groupName": "eslint",
-      "enabled": false
-    },
-    {
-      "matchPackageNames": ["/^prettier/", "/^@biomejs\\//"],
-      "groupName": "formatter",
-      "enabled": false
     },
     {
       "matchPackageNames": [
