@@ -1,4 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>h13/renovate-config"]
+  "extends": ["github>h13/renovate-config"],
+  "packageRules": [
+    {
+      "description": [
+        "This repo's only regex-manager pins are the lint/validate tools in validate.yml; automerge their 0.x minors too"
+      ],
+      "matchManagers": ["custom.regex"],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
+    }
+  ]
 }
