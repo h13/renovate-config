@@ -5,7 +5,7 @@
   "packageRules": [
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["provider"],
+      "matchDepTypes": ["provider", "required_provider"],
       "automerge": false
     },
     {
