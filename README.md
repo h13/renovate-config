@@ -40,10 +40,8 @@ rules are appended after earlier ones, and Renovate applies them sequentially
 
 Base configuration for all repositories.
 
-- Extends `config:best-practices`
-  (Docker pinning, lockfile maintenance, abandoned package alerts)
+- Extends [`config:best-practices`](https://docs.renovatebot.com/presets-config/#configbest-practices)
 - `minimumReleaseAge`: 7 days
-- `rangeStrategy`: pin (inherited from `config:best-practices`)
 - `schedule`: Sunday 21:00 - Monday 06:00 JST (reduce PR noise)
 - Automerge: minor, patch, pin, and digest updates
   (minor only from version 1.0.0 — a 0.x minor can be breaking per semver)
@@ -61,6 +59,8 @@ Extends `default` with Node.js rules:
 - Testing (jest, vitest, mocha, chai, sinon, c8, nyc): grouped into single PR
 - `@types/*`: grouped into single PR
 - Bundler (webpack, vite, esbuild, rollup, tsup, turbopack): grouped into single PR
+- swc: grouped into single PR, automerged
+- pnpm: own group
 
 ### `go`
 
@@ -85,11 +85,13 @@ Extends `default` with PHP rules:
 Extends `default` with GitHub Actions rules:
 
 - Minor/patch updates: grouped into single PR
+- Digest updates: grouped into single PR
 - Major updates: individual PRs (not automerged)
 
-### `terraform`
+### `opentofu`
 
-Extends `default` with Terraform rules:
+Extends `default` with OpenTofu rules
+(OpenTofu files are handled by Renovate's `terraform` manager):
 
 - Providers: automerge disabled (infrastructure changes require review)
 - Modules: automerge minor/patch, require review for major
