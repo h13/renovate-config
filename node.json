@@ -18,8 +18,7 @@
         "/^@oxfmt\\//",
         "oxlint-tsgolint"
       ],
-      "groupName": "oxc toolchain",
-      "automerge": true
+      "groupName": "oxc toolchain"
     },
     {
       "matchPackageNames": ["/^stylelint/", "/^postcss/"],
@@ -65,8 +64,7 @@
     },
     {
       "matchPackageNames": ["/^@swc\\//", "swc-loader"],
-      "groupName": "swc",
-      "automerge": true
+      "groupName": "swc"
     }
   ]
 }
